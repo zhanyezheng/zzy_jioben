@@ -1,0 +1,9 @@
+R-chip 处理流程  https://github.com/xuzhougeng/R-ChIP-data-analysis
+
+step1 : 下载SRR 数据 （01_get_SRR.sh）
+step2 ：  下载GSM 和 sample 的对应信息 （直接 从GSE97072 主页上下载）
+         +  - 号在linux下游特殊含义，所以需要将其进行替换（02_sample.sh）
+step3: 得到GSM 和SRR的对应信息，从download.table.txt 中，然后根据 GSM 号将GSM SRR 和样本名 join在一个表中
+       （03_get_GSM_SRR.sh 自己写的得到GSM SRR 的信息，有缺陷不能将GSM 写在SRR 前面）
+        这步学习流程中的脚本，很巧妙
+step4 : 将下载的SRR fastq文件重命名为sample开头的文件；
